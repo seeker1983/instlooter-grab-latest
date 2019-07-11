@@ -1,4 +1,5 @@
 from pprint import pprint
+from datetime import datetime
 from apiclient.discovery import build
 from apiclient.http import MediaFileUpload
 from oauth2client.service_account import ServiceAccountCredentials
@@ -63,14 +64,19 @@ def set_handle_result(is_handle, info):
 
     for (index, row) in enumerate(values):
         if(row[0] == is_handle):
+            range = "B%s:C%s" % (index+2, index+2) 
+            values = [[str(info), get_date_stamp()]]
             print('Saving result in row %s: \'%s\'' % (index + 2, info))
             get_spreadsheets_service().values().update(
                 spreadsheetId=config.sheet_id,
-                range="B" + str(index+2), 
+                range=range, 
                 valueInputOption='RAW',
-                body = { 'values': [[str(info)]]}).execute()
+                body = { 'values': values}).execute()
             return 0
     raise Exception("Handle %s not found in spreadsheet" % is_handle)
+
+def get_date_stamp():
+    return datetime.now().strftime("%H:%M:%S (%d-%b-%Y)")
 
 if __name__ == '__main__':
     main()    
