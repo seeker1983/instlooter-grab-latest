@@ -1,0 +1,6 @@
+keys/
+downloads/
+archives/
+*.sublime*
+__pycache__
+sftp-config.json
