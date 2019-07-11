@@ -14,7 +14,7 @@ def process(is_handle):
 def download(is_handle):
 	if not is_handle:
 		raise Exception('No is_handle');
-	cmd = ['instalooter', 'user', is_handle, '-n', str(config.max_images), 'downloads/' + is_handle]
+	cmd = ['instalooter', 'user', is_handle, '-T', config.name_template, '-n', str(config.max_images), 'downloads/' + is_handle]
 	result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	print('Executed \'%s\' with return code %s' % (' '.join(cmd), result.returncode))
 
