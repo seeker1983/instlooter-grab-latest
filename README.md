@@ -8,14 +8,14 @@ Python3 script to load latest images from instagram and upload zipped archive in
 Currently, due to instagram Graph Query API restrictions, script allows downloading **12 users per hour**, provided you ask for **latest 100 pictures**.
 
 ## Installation
-1. Create service account key for google cloud platform project. Download **.json** file and set *key_file_location* the path in config.py
+1. Create service account key for google cloud platform project. Download appropriate **.json** file.
+Set *key_file_location* to the path of this file in config.py
 2. Make a copy of test sheet.
 https://docs.google.com/spreadsheets/d/1Xp7n1Gl3lPyoKskMZhAO8yVUmH6g6XWuxQi1vQrbbAU/copy
-3. Take **client_email** from credentials json file in step 1 and give edit access to this email to sheet from step 2
-http://prntscr.com/oiue7v
-Set *sheet_id* to the id of the newly created sheet in **config.py**
-4. Create a google drive folder, and, similar to step 3 add *client_email* edit access to the folder.
-Set *folder_id* to the id of the output google folder in **config.py**
+3. Take **client_email** from credentials json file in step 1 and give edit access to this email to sheet from step 2. See [screenshot](https://raw.githubusercontent.com/seeker1983/instlooter-grab-latest/master/doc/images/sheet-access.png)
+Set *sheet_id* to the id of the newly created sheet in *config.py*
+4. Create a google drive folder, and, similar to step 3 give **client_email** edit access to the folder.
+Set *folder_id* to the id of the output google folder in *config.py*
 5. Install python3 dependencies.
 ```
     pip3 install -r requirements.txt
