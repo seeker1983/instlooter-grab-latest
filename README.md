@@ -17,6 +17,7 @@ Give edit access to this email to sheet from step 2. See [screenshot](https://ra
 Set *sheet_id* to the id of the newly created sheet in *config.py*
 4. Create a google drive folder, and, similar to step 3 give **client_email** edit access to the folder.
 Set *folder_id* to the id of the output google folder in *config.py*
+Optionally, update result folder link in Google Sheet "Reference" page. This one serves no other purpose than a quick link to open folder.
 5. Install python3 dependencies.
 ```
     pip3 install -r requirements.txt
