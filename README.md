@@ -13,7 +13,9 @@ Currently, due to instagram Graph Query API restrictions, script allows download
 https://docs.google.com/spreadsheets/d/1Xp7n1Gl3lPyoKskMZhAO8yVUmH6g6XWuxQi1vQrbbAU/copy
 3. Take **client_email** from credentials json file in step 1 and give edit access to this email to sheet from step 2
 http://prntscr.com/oiue7v
+Set *sheet_id* to the id of the newly created sheet in **config.py**
 4. Create a google drive folder, and, similar to step 3 add *client_email* edit access to the folder.
+Set *folder_id* to the id of the output google folder in **config.py**
 5. Install python3 dependencies.
 ```
     pip3 install -r requirements.txt
