@@ -12,7 +12,8 @@ Currently, due to instagram Graph Query API restrictions, script allows download
 Set *key_file_location* to the path of this file in config.py
 2. Make a copy of test sheet.
 https://docs.google.com/spreadsheets/d/1Xp7n1Gl3lPyoKskMZhAO8yVUmH6g6XWuxQi1vQrbbAU/copy
-3. Take **client_email** from credentials json file in step 1 and give edit access to this email to sheet from step 2. See [screenshot](https://raw.githubusercontent.com/seeker1983/instlooter-grab-latest/master/doc/images/sheet-access.png)
+3. Copy **client_email** from credentials json file in step 1.
+Give edit access to this email to sheet from step 2. See [screenshot](https://raw.githubusercontent.com/seeker1983/instlooter-grab-latest/master/doc/images/sheet-access.png)
 Set *sheet_id* to the id of the newly created sheet in *config.py*
 4. Create a google drive folder, and, similar to step 3 give **client_email** edit access to the folder.
 Set *folder_id* to the id of the output google folder in *config.py*
