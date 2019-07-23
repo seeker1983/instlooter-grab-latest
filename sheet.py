@@ -63,7 +63,7 @@ def set_handle_result(is_handle, info):
     values = result.get('values', [])
 
     for (index, row) in enumerate(values):
-        if(row[0] == is_handle):
+        if(row[0] == is_handle and len(row) == 1):
             range = "B%s:C%s" % (index+2, index+2) 
             values = [[str(info), get_date_stamp()]]
             print('Saving result in row %s: \'%s\'' % (index + 2, info))
