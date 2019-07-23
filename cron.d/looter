@@ -1,0 +1,11 @@
+#
+# Looter - scan spreadsheet if there new jobs, if there are, loot instagram and 
+# upload archive into google drive.
+#
+# Developed by Krupodorov Roman(krupod@gmail.com)
+#
+
+# By default, run every 10 minutes.
+#
+
+*/5 * * * * looter /home/looter/instalooter/run.sh 2>&1 > /dev/null

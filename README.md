@@ -29,7 +29,7 @@ Make user folder test is created and images are downloaded inside.
 ```
 7. Test script
 ```
-    python3 looter.py
+    python3 main.py
 ```
 If everything is setup correctly, the appropriate row in google sheet will have google drive link for newly uploaded file added, and the appropriate file will appread in google drive folder configured in step 4.
 
